@@ -1,0 +1,7 @@
+passmongo = XYJx6Oip1VeLlg8f
+user = cursoudemy
+
+uri = mongodb+srv://cursoudemy:<XYJx6Oip1VeLlg8f>@cluster0.aq7kh.mongodb.net/dbapi?retryWrites=true&w=majority
+
+
+
