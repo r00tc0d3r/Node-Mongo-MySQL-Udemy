@@ -7,6 +7,8 @@ const port = process.env.PORT || 3000;
 const app = express();
 app.use(cors());
 
+app.use("/api", require("./routes"));
+
 app.listen(port, () => {
   console.log(`App Ready in http://localhost:${port}`);
 });
