@@ -7,7 +7,7 @@ const TracksScheme = new mongoose.Schema(
       type: String,
     },
     album: {
-      type: Number,
+      type: String,
     },
     cover: {
       type: String,
@@ -38,7 +38,7 @@ const TracksScheme = new mongoose.Schema(
       },
     },
     mediaId: {
-      type: mongoose.Types.ObjectId,
+      type: String,
     },
   },
   {
