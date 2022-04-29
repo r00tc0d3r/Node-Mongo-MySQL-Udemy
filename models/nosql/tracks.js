@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const mongooseDelete = require("mongoose-delete");
 
 const TracksScheme = new mongoose.Schema(
   {
@@ -46,6 +47,7 @@ const TracksScheme = new mongoose.Schema(
     versionKey: false,
   }
 );
-
+// Soft Delete mongoose
+TracksScheme.plugin(mongooseDelete, { overrideMethods: "all" });
 // Exportando el modelo de mongoose ("nombre de tabla", scheme);
 module.exports = mongoose.model("tracks", TracksScheme);
