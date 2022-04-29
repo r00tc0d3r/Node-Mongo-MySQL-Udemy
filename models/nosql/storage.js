@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+const mongooseDelete = require("mongoose-delete");
 const StorageScheme = new mongoose.Schema(
   {
     // Estructura del objeto
@@ -15,6 +15,7 @@ const StorageScheme = new mongoose.Schema(
     versionKey: false,
   }
 );
-
+// Soft Delete mongoose
+StorageScheme.plugin(mongooseDelete, { overrideMethods: "all" });
 // Exportando el modelo de mongoose ("nombre de tabla", scheme);
 module.exports = mongoose.model("storages", StorageScheme);
