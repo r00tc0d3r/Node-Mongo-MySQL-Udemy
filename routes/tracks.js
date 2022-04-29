@@ -7,7 +7,7 @@ const customHeader = require("../middleware/customHeader");
 // TODO: http://localhost:PORT/tracks GET, POST, DELETE, PUT
 
 router.get("/", getItems);
-router.post("/", validatorCreateItem, customHeader, createItem);
+router.post("/", validatorCreateItem, createItem);
 router.get("/:id", getItem);
 
 module.exports = router;
